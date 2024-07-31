@@ -30,14 +30,18 @@ The project structure is organized as follows:
 ```
 project-root/
 ├── index.html
+├── auth.html
+:
 ├── css/
 │   └──< css files
 ├── js/
 │   └──< scripts
 ├── assets/
 │   └──< assest files
+├── src/
+│   └──< source files
 └── images/
-│   └──< image files
+    └──< image files
 ```
 
 ## Installation
@@ -65,21 +69,26 @@ This project is a frontend website built using HTML, CSS, and JavaScript.
 * Homepage
 * Login/Signup page
 * Message
-* Testimonial`
+* Testimonial
 
 **Commit Messages**
 
 To maintain a clear commit history, please follow these basic rules for your commit messages:
 
-* **Start with a verb:** (e.g., fix, add, update, remove)
+* **Start with a verb:** (e.g., Fix, Add, Update, Remove)
 * **Describe the change briefly and clearly:** (e.g., fixed broken image link, added slider functionality)
 * **Optional:** Include references to issues or tickets (e.g., fix #123 - missing validation)
 
 Example commit messages:
 
-* `fix: typo in about us section`
-* `add: new product page`
-* `update: dependencies to latest versions`
+* `Fix: typo in about us section`
+* `Add: new product page`
+* `Update: dependencies to latest versions`
 
 ## Acknowledgements
 We four deserve this acknowledgement.
+
+- Vishal Kumar
+- Isha Singhal
+- Prem Agarwal
+- Zalavadiya Dishil
