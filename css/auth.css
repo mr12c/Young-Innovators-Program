@@ -10,12 +10,58 @@ body,
 input {
   font-family: "Poppins", sans-serif;
 }
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--secondary-color);
+  position: relative;
+  top: 0;
+  height: 7vh;
+  width: 100vw;
+  z-index: 99;
+  background-color: #D0EBEA;
+}
 
+.nav__logo a {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.link a:hover {
+  color: var(--secondary-color-light);
+}
+
+.nav__menu__btn {
+  display: none;
+  font-size: 1.5rem;
+}
 .container {
   position: relative;
   width: 100%;
   background-color: #fff;
-  min-height: 100vh;
+  min-height: 93vh;
   overflow: hidden;
 }
 
