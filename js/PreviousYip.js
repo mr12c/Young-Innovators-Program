@@ -72,7 +72,21 @@ previousYearBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         // Update current year based on clicked button
         currentYear = parseInt(btn.textContent.trim());
-        animateImages()
+         if(window.innerWidth>500){
+            animateImages()
+
+         }
+         else{
+            img1.style.opacity = 0.4;
+            img1.style.transition = "transform 1s ease-in-out, opacity 0.2s ease-in-out";
+
+
+            setTimeout(() => {
+                img1.style.opacity = 1
+                // img1.style.transition = "none";
+
+            }, 200);
+         }
         animatePreviousYipCard()
          sectionPara.style.opacity = "0"
          
