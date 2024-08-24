@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Young Innovators' Program</title>
   </head>
@@ -26,6 +27,19 @@
           <li class="link"><a href="#blog">More</a></li>
           <li class="link"><a href="auth.html">Login/SignUp</a></li>
         </ul>
+        <li class="relative">
+          <a href="#" class="text-[1rem] font-semibold mr-5 " id="more-btn">More 
+              <span><i class="ri-arrow-down-s-line"></i></span>
+          </a>
+          <!-- Dropdown menu -->
+          <ul id="dropdown" class="absolute right-0 mt-2 w-48 bg-[white] text-black shadow-lg rounded-md overflow-hidden hidden">
+              <li><a href="PreviousYIP.html" class="block px-4 py-2 hover:bg-gray-200">Previous Yip</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Message</a></li>
+              <li><a href="Testimonial.html" class="block px-4 py-2 hover:bg-gray-200">Testimonials</a></li>
+              <div></div>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Rule Book</a></li>
+          </ul>
+      </li>
         <div class="nav__menu__btn" id="menu-btn">
           <span><i class="ri-menu-line"></i></span>
         </div>
@@ -342,7 +356,24 @@ $(".step05").click( function() {
 	$(".analysis").addClass("active").siblings().removeClass("active");
 });
 
+</script>
+<script>
+  // Dropdown toggle functionality
+  document.getElementById('more-btn').addEventListener('click', function() {
+      const dropdown = document.getElementById('dropdown');
+      dropdown.classList.toggle('hidden');
+  });
+
+  // Close the dropdown if clicked outside
+  window.addEventListener('click', function(e) {
+      const moreBtn = document.getElementById('more-btn');
+      const dropdown = document.getElementById('dropdown');
+      if (!moreBtn.contains(e.target) && !dropdown.contains(e.target)) {
+          dropdown.classList.add('hidden');
+      }
+  });
+</script>
  
-    </script>
+     
   </body>
 </html>
