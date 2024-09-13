@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+const copyIcon = document.querySelector('.ri-file-copy-line');
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -61,3 +62,25 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
   },
 });
+
+
+// copy email
+
+
+function copyToClipboard() {
+  // The email to copy
+  const email = `${document.querySelector("#mailId").innerText}`;
+  
+  // Copy the email to the clipboard
+  navigator.clipboard.writeText(email).then(() => {
+    copyMail.style.display = "inline";
+    setTimeout(()=> {
+      copyMail.style.display = "none";
+    }, 1500)      
+  }).catch(err => {
+    copyMail.style.display = "inline";
+    setTimeout(()=> {
+      copyMail.style.display = "failed to copy";
+    }, 1500) 
+  });
+}
