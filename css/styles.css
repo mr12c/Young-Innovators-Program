@@ -29,13 +29,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 #home{
   color: var(--secondary-color);
 }
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .section__header {
@@ -127,6 +129,7 @@ header {
   background-size: cover;
 }
 
+
 nav {
   max-width: var(--max-width);
   margin: auto;
@@ -141,14 +144,14 @@ nav {
   font-size: 2rem;
   font-weight: 700;
   color: var(--secondary-color);
-}
+} 
 
 .nav__links {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 2rem;
-}
+} */
 
 .link a {
   padding: 5px;
@@ -486,6 +489,10 @@ nav {
 
 .footer {
   background-color: var(--black);
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; */
 }
 
 .footer ul{
@@ -506,9 +513,15 @@ nav {
 .footer__container {
   display: grid;
   grid-template-columns: 1.5fr repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2rem;  
 }
 
+
+.footer__col {
+  width: 20 vw;
+  margin: 5px 10px;
+  text-align: center;
+}
 .footer__col h5 a {
   display: inline-block;
   margin-bottom: 1rem;
@@ -524,14 +537,26 @@ nav {
 
 .footer__socials {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
   flex-wrap: wrap;
 }
 
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
 .footer__socials a {
   padding: 5px 10px;
+  margin: 10px;
   font-size: 1.25rem;
   color: var(--primary-color);
   background-color: var(--secondary-color-light);
@@ -570,6 +595,25 @@ nav {
   color: var(--text-light);
 }
 
+.mail {
+  color: var(--text-light);
+}
+
+.ri-file-copy-line {
+  color: var(--text-light);
+  opacity: 0.5;
+}
+
+#copyMail {
+  color: var(--text-light);
+  opacity: 0.5;
+  position: absolute;
+  display: none;
+}
+
+
+
+
 @media (width < 900px) {
   .nav__links {
     gap: 1.5rem;
@@ -595,7 +639,10 @@ nav {
   }
 
   .footer__container {
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 

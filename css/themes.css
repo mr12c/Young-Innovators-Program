@@ -74,7 +74,7 @@ nav button:hover{
     width: 100vw;
     height: 100vh;
     background-color: rgb(0, 0, 0);
-    background-image: url("../images/themeImage1.png");
+    background-image: url("../images/theme-image-1.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -86,19 +86,19 @@ nav button:hover{
 }
 
 .content2{
-    background-image: url("../images/themeImage2.png") ;
+    background-image: url("../images/theme-image-2.png") ;
 }
 .content3{
-    background-image: url("../images/themeImage3.png") ;
+    background-image: url("../images/theme-image-3.png") ;
 }
 .content4{
-    background-image: url("../images/themeImage4.png") ;
+    background-image: url("../images/theme-image-4.png") ;
 }
 .content5{
-    background-image: url("../images/themeImage5.png") ; 
+    background-image: url("../images/theme-image-5.png") ; 
 }
 .content6{
-    background-image: url("../images/themeImage6.png") ;
+    background-image: url("../images/theme-image-6.png") ;
 }
 
 .theme-image {
