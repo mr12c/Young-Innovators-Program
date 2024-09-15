@@ -5,7 +5,7 @@ This project is a frontend website created using only HTML, CSS, and JavaScript.
 
 ## Color Palette
 The following color palette is used throughout the website:
-
+       
 - **Primary Colors**
   - `--primary-100: #26A69A`
   - `--primary-200: #408d86`
