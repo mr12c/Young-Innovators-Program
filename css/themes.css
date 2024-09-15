@@ -15,20 +15,6 @@
     font-family: 'Poppins';
 }
 
-
-/* nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 12%;
-    z-index: 999;
-    background-color: #000000 !important;
-} */
-
 .navbar{
     background-color: #06aa79 !important;
 }
@@ -116,15 +102,8 @@ nav button:hover{
     color: #070000;
     position: relative;
     top: 50%;
-    
-    /* position: absolute;
-    top: 50%;
-    left: 20%; */
 }
 
-/* .robotics {
-    color: rgb(251, 243, 2);
-} */
 
 .info{
     display: flex;
@@ -166,28 +145,19 @@ nav button:hover{
 .swiper_arrow{
     position: absolute;
     top: 50% !important;
-    /* left: 20% !important; */
     width: 50px !important;
     background-color: rgba(255, 254, 254, 0.352) !important;
     border-radius: 50%;
+    opacity: 0.4;
 }
 
 .swiper_arrow img{
     width: 50px !important;
     height: 50px !important;
     object-fit: contain ;
-    /* filter: invert(50%) ; */
     color: #000000bd;
     
 }
-/* 
-.swiper-button-prev img{
-    left: 5px !important;
-}
-
- .swiper-button-next img{
-    right: 5px !important;
-} */
 
 .navbar-brand img {
     height: 25px;
@@ -197,10 +167,6 @@ nav button:hover{
 /* MQ  */
 
 @media (max-width:900px) {
-    /* .information .head h1{
-        font-size: 3rem;
-        line-height: 3rem;
-    } */
 
     .information h3 {
         font-size: 0.7rem;
