@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --top-position: 50vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+
+    font-family: 'Poppins';
+}
+
+.navbar{
+    background-color: #06aa79 !important;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.logo a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.logo a span{
+    color: aqua;
+}
+
+nav button{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #000000;
+    background-color: transparent;
+    color: #ffffff ;
+    cursor: pointer;
+    transition: .3s;
+}
+
+nav button a {
+    color: #000000 ;
+    filter: invert(100%) ;
+}
+
+nav button:hover{
+    box-shadow: 3px 3px 5px #fff;
+}
+
+
+.content{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    background-image: url("../images/theme-image-1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content2{
+    background-image: url("../images/theme-image-2.png") ;
+}
+.content3{
+    background-image: url("../images/theme-image-3.png") ;
+}
+.content4{
+    background-image: url("../images/theme-image-4.png") ;
+}
+.content5{
+    background-image: url("../images/theme-image-5.png") ; 
+}
+.content6{
+    background-image: url("../images/theme-image-6.png") ;
+}
+
+.theme-image {
+    height: 100%;
+    width: 70%;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 80vh;
+    width: 60vh;
+    color: #070000;
+    position: relative;
+    top: 50%;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #000000;
+}
+
+.info h2{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.info h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.information .head h1{
+    font-size: 5rem;
+    line-height: 5rem;
+    color: #020000;
+    margin-top: 20px;
+}
+
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after{
+    display: none;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after{
+    display: none;
+} 
+
+
+.swiper_arrow{
+    position: absolute;
+    top: 50% !important;
+    width: 50px !important;
+    background-color: rgba(255, 254, 254, 0.352) !important;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.swiper_arrow img{
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain ;
+    color: #000000bd;
+    
+}
+
+.navbar-brand img {
+    height: 25px;
+    width: 25px;
+}
+
+/* MQ  */
+
+@media (max-width:900px) {
+
+    .information h3 {
+        font-size: 0.7rem;
+    }
+    .information p {
+        font-size: 0.5rem;
+    }
+    .swiper_arrow img{
+        height: 30px !important;
+        width: 30px !important;
+    }
+}
+
+@media (max-width:500px) {
+    .information{
+        top: 40%;
+        width: 60%;
+    }
+    .information .head h1{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .information h3 {
+        font-size: 0.7rem;
+    }
+    .information p {
+        font-size: 0.5rem;
+    }
+
+    .swiper_arrow {
+        position: absolute !important;
+        top: 58% !important;
+    }
+
+    .swiper_arrow img{
+        height: 20px !important; 
+        width: 20px !important;
+    }
+
+}
