@@ -183,7 +183,10 @@ nav {
 .header__container .btn {
   margin: auto;
 }
-
+ 
+.navdrop{
+  list-style-type: none;
+}
 .about {
   background-color: var(--secondary-color);
 }
@@ -731,7 +734,7 @@ nav {
 	position:absolute;
 	width:100%;
 	bottom:0;
-    font-size: 14px;
+    font-size: 0.5rem;
 }
 
 #progress-bar-container li.active, #progress-bar-container li:hover {
