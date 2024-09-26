@@ -9,13 +9,14 @@ html {
 	box-sizing: border-box;
     
 }
+ /* General styles */
 .navbar {
-    background-color: #43A49B;
+    background-color: #80CBC4;
     width: 100vw;
-    padding: 0.2rem 0;
-	position: 
-	relative;
-	position: fixed;
+    padding: 0.14rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 .container2 {
@@ -25,13 +26,17 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+	padding-left:0.3rem;
+	padding-right: 0.3rem;
 }
 
 .logo {
-    width: 10%;
+    width: 8%;
     height: auto;
 }
-
+.menu{
+	transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
 .logo img {
     width: 100%;
 }
@@ -42,7 +47,8 @@ html {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.6rem; /* Adjust font size here */
+    font-size: 0.49rem;
+	transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
 
 .menu ul li {
@@ -51,13 +57,70 @@ html {
 
 .menu ul li a {
     text-decoration: none;
-    color: white; /* Change to your preferred link color */
+    color: rgb(15, 39, 35);
 }
 
 .menu ul li a:hover {
-    text-decoration: underline; /* Optional: Adds underline on hover */
+    text-decoration: underline;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+	.logo {
+		width: 20%;
+		height: auto;
+	}
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #80CBC4;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+		transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+		
+		padding-top: 0.4rem;
+		padding-bottom: 0.4rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.3rem;
+        color: rgb(17, 30, 29);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+	.container{
+		margin-top:3rem;
+	}
+ 
+}
+
+/* Hide the hamburger on larger screens */
+ 
+@media (min-width: 768px) and (max-width: 30000px){
+	.hamburger{
+		display:none;
+	}
+}
+ 
 .container {
+	 
 	min-height: 100vh;
 	width: 100%;
 	display: flex;

@@ -58,3 +58,8 @@ prev.addEventListener('click', () => {
 
 // Automatically switch to the next slide every 2 seconds
 let autoSlide = setInterval(nextSlide, 3000);
+
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('active');
+});
