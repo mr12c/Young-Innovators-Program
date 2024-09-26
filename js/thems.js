@@ -8,4 +8,4 @@ var swiper = new Swiper('.Slider' , {
         prevEl: '.swiper-button-prev',
         nextEl: '.swiper-button-next',
     },
-});
+});  

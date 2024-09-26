@@ -14,7 +14,7 @@ const PreYipData = [
         mainh1:"YIP 2022",
         text:'The Young Innovators Program 2022 at IIT Kharagpur witnessed an impressive outreach, encompassing over 1500 schools globally. This remarkable initiative garnered participation from a diverse cohort of 3000 students hailing from countries such as India,Denmark, Abu Dhabi, Malaysia, Singapore, and Saudi Arabia. Notably, the top 31 schools that advanced to the second round were accorded an invaluable opportunity for a three-day visit to IIT Kharagpur. During this immersive experience, students were immersed in the rich scientific milieu of the institution, culminating in the presentation of their innovative models before esteemed researchers and distinguished guests. Ultimately, the Bhartiyam International School emerged as the winner, while the Ridge Valley School secured the position of runners-up, showcasing exceptional talent and ingenuity in this global academic platform'
     },
-    {
+    {  
         year:2019,
         img1:"./images/2.jpg",
         img2:"./images/2.jpg",

@@ -26,7 +26,7 @@ dots.forEach((dot, ind) => {
     dot.classList.add("active");
   });
 });
-
+  
 leftArrow.addEventListener("click", () => {
   slideIndex = slideIndex > 0 ? slideIndex - 1 : slides.length - 1 ;
   setIndex();
