@@ -9,7 +9,7 @@ let slideIndex = 0;
 
 const setIndex = () => {
   document.querySelector(".dots .active").classList.remove("active");
-  slider.style.transform = `translateX(${slideIndex * -20}%)`;
+  slider.style.transform = `translateX(${slideIndex * -100}%)`;
   // timer.stop();
   // timer.start();
 };
@@ -40,4 +40,6 @@ rightArrow.addEventListener("click", () => {
   dotsWrapper.children[slideIndex].classList.add("active");
 });
 
-
+setInterval(() => {
+  rightArrow.click();
+}, 7000);
