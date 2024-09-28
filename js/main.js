@@ -1,7 +1,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
-const copyIcon = document.querySelector('.ri-file-copy-line');
+const copyIcons = document.querySelectorAll('.ri-file-copy-line');
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -66,21 +66,33 @@ const swiper = new Swiper(".swiper", {
 
 // copy email
 
+// Select all copy buttons
+const copyButtons = document.querySelectorAll('.copy-button');
 
-function copyToClipboard() {
-  // The email to copy
-  const email = `${document.querySelector("#mailId").innerText}`;
-  
-  // Copy the email to the clipboard
-  navigator.clipboard.writeText(email).then(() => {
-    copyMail.style.display = "inline";
-    setTimeout(()=> {
-      copyMail.style.display = "none";
-    }, 1500)      
-  }).catch(err => {
-    copyMail.style.display = "inline";
-    setTimeout(()=> {
-      copyMail.style.display = "failed to copy";
-    }, 1500) 
+// Add event listener to each copy button
+for (let copyIcon of copyIcons) {
+  copyIcon.addEventListener('click', (event) => {
+    // Prevent the default action
+    event.preventDefault();
+
+    // Get the text to copy from the data attribute
+    const button = copyIcon.firstElementChild;
+    const textToCopy = copyIcon.parentElement.innerText;
+
+    // Copy the text to the clipboard
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      // Show the 'Copied' button for 1.5 seconds
+      button.style.display = "inline";
+      button.innerText = 'Copied';
+      setTimeout(() => {
+        button.style.display = "none"; // Reset button text
+      }, 1000);
+    }).catch(err => {
+      console.error('Error copying text: ', err);
+    });
   });
 }
+
+
+
+

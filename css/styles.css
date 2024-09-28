@@ -499,13 +499,17 @@ nav {
 }
 
 .footer ul{
-  line-height: 0;
+  line-height: 1rem;
   list-style: none;
   font-size: 0.8rem;
 }
 
+.footer ul li {
+  margin-bottom: 1rem;
+}
+
 .footer ul li h1{
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   line-height: 1.8rem;
   color: var(--primary-color);
 }
@@ -534,7 +538,13 @@ nav {
 }
 
 .footer__col p {
-  margin-bottom: 2rem;
+  margin-bottom: 0.7rem;
+  color: var(--text-light);
+}
+
+#g-secs a {
+  display: block;
+  padding-bottom: 0.8rem;
   color: var(--text-light);
 }
 
@@ -573,6 +583,7 @@ nav {
   background-color: var(--primary-color);
 }
 
+
 .footer__col h4 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -607,9 +618,9 @@ nav {
   opacity: 0.5;
 }
 
-#copyMail {
+.copy-button {
   color: var(--text-light);
-  opacity: 0.5;
+  opacity: 0.8;
   position: absolute;
   display: none;
 }
