@@ -128,3 +128,7 @@ rightArrow.addEventListener("click", () => {
   slideIndex = slideIndex < slides.length - 1 ? slideIndex + 1 : 0;
   setIndex();
 });
+
+setInterval(() => {
+  rightArrow.click();
+}, 7000);
