@@ -140,11 +140,18 @@ nav {
   color: var(--secondary-color);
 }
 
-.nav__logo a {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--secondary-color);
-} 
+.nav__logo img {
+  height: 140px;
+  width: 120px;
+  margin-left: 13px;
+  /* margin-right: 130px; */
+}
+
+.nav__logo1 img {
+  height: 140px;
+  width: 120px;
+  border-radius: 10%;
+}
 
 .nav__links {
   list-style: none;
@@ -161,7 +168,22 @@ nav {
   transition: 0.3s;
 }
 
+.link1 a {
+  padding: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  transition: 0.3s;
+  background-color: red;
+  border-radius: 7%;
+  border-color: #000000;
+}
+
 .link a:hover {
+  color: var(--secondary-color-light);
+}
+
+.link1 a:hover {
   color: var(--secondary-color-light);
 }
 
@@ -676,10 +698,21 @@ nav {
     color: var(--dark);
   }
 
+  .nav__links .link1 a {
+    opacity: 0;
+    color: var(--dark);
+  }
+	
   .nav__links .link a:hover {
     opacity: 0;
     color: var(--secondary-color);
   }
+
+  .nav__links .link1 a:hover {
+    opacity: 0;
+    color: var(--secondary-color);
+  }
+	
   .nav__links.open .link a {
     opacity: 1;
   }
@@ -888,4 +921,232 @@ nav {
 .section-content {
   background-color: #7de2d8;
   border-radius: 60px 0;
+}
+
+.container {
+  width: 100%;
+  height: auto; /*Change to auto to accommodate content */
+  background-color: #80CBC4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; /* Add some padding; */
+}
+
+.testimonials-wrapper {
+  width: 90%;
+  max-width: 1200px; /* Set a max width for larger screens */
+  position: relative;
+  display: flex; /* Enable flex for inner content */
+  flex-direction: column; /* Stack children vertically */
+}
+
+.testimonials-header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.testimonials-header h1 {
+  position: relative;
+  isolation: isolate;
+  margin-bottom: 1rem;
+  padding-left: 20px;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #263339;
+}
+
+.testimonials-header h1::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 45px;
+  aspect-ratio: 1;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.testimonials {
+  width: 100%;
+  position: relative; /* Changed to relative to fix positioning */
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.slide {
+  min-width: 100%; /* Ensure each slide takes full width */
+  display: flex; /* Enable flex for slide content */
+}
+
+.slide-bg {
+  width: 100%; /* Cover full slide */
+  height: auto;
+  background-color: #26A69A;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+.slide-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem; /* Uniform padding */
+}
+
+.slide-img {
+  flex: 1; /* Allow image section to grow */
+  margin-right: 2rem; /* Spacing between image and text */
+}
+
+.slide-img img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 3rem 0 3rem 0;
+}
+
+.slide-text {
+  flex: 2; /* Allow text section to grow more than image */
+}
+
+.slide-text h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #111;
+  padding-bottom: 2rem;
+}
+
+.slide-text p {
+  font-size: 1.1rem;
+  color: rgb(30, 40, 35);
+  line-height: 1.8;
+}
+
+.client {
+  font-size: 1.8rem;
+  color: rgb(11, 83, 47);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem; /* Space above controls */
+}
+
+.controls i {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+}
+
+.controls i:hover {
+  background-color: #26A69A;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* Space above dots */
+}
+
+.dots span {
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: #728f9e;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.dots span.active {
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: #fff;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* For devices with a max width of 1200px */
+@media (max-width: 1200px) {
+  .testimonials-wrapper {
+    width: 95%;
+  }
+
+  .testimonials-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .slide-text h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* For tablets (max width of 768px) */
+@media (max-width: 768px) {
+  .testimonials-wrapper {
+    width: 100%;
+  }
+
+  .slide {
+    flex-direction: column;
+  }
+
+  .slide-img {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .slide-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .slide-text p {
+    font-size: 1rem;
+  }
+}
+
+/* For mobile phones (max width of 576px) */
+@media (max-width: 576px) {
+  .testimonials-header {
+    font-size: 1.8rem;
+  }
+
+  .testimonials-header h1 {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .slide-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .slide-text p {
+    font-size: 0.9rem;
+  }
+
+  .controls i {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .dots span {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
 }
