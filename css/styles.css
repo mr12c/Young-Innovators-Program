@@ -264,7 +264,7 @@ nav {
 }
 
 .stats {
-  background-color: var(--black);
+  background-color: var(--secondary-color-light);
 }
 
 .stats__container {
@@ -279,7 +279,8 @@ nav {
 
 .stats__content .para {
   margin-bottom: 2rem;
-  color: var(--text-light);
+  color: var(--light);
+  /* color: var(--text-light); */
 }
 
 .stats__grid {
