@@ -102,7 +102,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5rem;
+    padding-left: 10px;
+    padding-right: 40px;
   }
   
   /* .slide i {
@@ -201,7 +202,13 @@
     transform: translateY(-50%);
     cursor: pointer;
   }
-  
+
+  .controls i img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+  }
+
   .controls i:nth-child(1) {
     left: 12%;
   }
@@ -211,7 +218,7 @@
   }
   
   .controls i:hover{
-    background-color: #ffffff;
+    background-color: #26A69A;
     transition: background-color 1s ease-in-out;
   }
   
