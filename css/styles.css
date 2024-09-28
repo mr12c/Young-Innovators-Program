@@ -944,27 +944,37 @@ nav {
 
 .container {
   width: 100%;
-  height: auto; /*Change to auto to accommodate content */
+  height: auto; 
   background-color: #80CBC4;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem; /* Add some padding; */
+  padding: 2rem;
 }
 
 .testimonials-wrapper {
   width: 90%;
-  max-width: 1200px; /* Set a max width for larger screens */
+  max-width: 1200px; 
   position: relative;
-  display: flex; /* Enable flex for inner content */
-  flex-direction: column; /* Stack children vertically */
+  display: flex;
+  flex-direction: column; 
 }
 
 .testimonials-header {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--secondary-color);
+  /* text-align: center;  */
+  margin-left: 1rem;
 }
+
+/* .testimonials-header h1 {
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #263339;
+} */
 
 .testimonials-header h1 {
   position: relative;
@@ -991,75 +1001,76 @@ nav {
 
 .testimonials {
   width: 100%;
-  position: relative; /* Changed to relative to fix positioning */
-  overflow: hidden;
+  position: relative;
+  overflow: hidden; 
 }
 
 .slider {
   display: flex;
-  transition: transform 0.8s cubic-bezier(1, 0, 0, 1);
+  width: 100%; 
+  transition: transform 0.8s cubic-bezier(1, 0, 0, 1); 
 }
 
 .slide {
-  min-width: 100%; /* Ensure each slide takes full width */
-  display: flex; /* Enable flex for slide content */
-}
-
-.slide-bg {
-  width: 100%; /* Cover full slide */
-  height: auto;
-  background-color: #26A69A;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.7;
+  flex: 0 0 100%; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .slide-content {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; 
+  justify-content: center;
   align-items: center;
-  padding: 0.5rem; /* Uniform padding */
 }
 
 .slide-img {
-  flex: 1; /* Allow image section to grow */
-  margin-right: 2rem; /* Spacing between image and text */
+  width: 100%;
+  max-width: 600px; 
+  height: auto;
+  margin-bottom: 2rem;
 }
 
 .slide-img img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 3rem 0 3rem 0;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2rem;
 }
 
 .slide-text {
-  flex: 2; /* Allow text section to grow more than image */
+  width: 100%;
+  max-width: 800px; 
+  text-align: center;
 }
 
 .slide-text h3 {
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 800;
   color: #111;
-  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .slide-text p {
   font-size: 1.1rem;
   color: rgb(30, 40, 35);
-  line-height: 1.8;
+  line-height: 1.3;
 }
 
 .client {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: rgb(11, 83, 47);
+  margin-top: 1.5rem;
 }
 
 .controls {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem; /* Space above controls */
+  margin-top: 1rem;
 }
 
 .controls i {
@@ -1081,7 +1092,7 @@ nav {
 .dots {
   display: flex;
   justify-content: center;
-  margin-top: 1rem; /* Space above dots */
+  margin-top: 1rem;
 }
 
 .dots span {
@@ -1099,10 +1110,7 @@ nav {
   background-color: #fff;
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
-
-/* For devices with a max width of 1200px */
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .testimonials-wrapper {
     width: 95%;
   }
@@ -1112,22 +1120,36 @@ nav {
   }
 
   .slide-text h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
-/* For tablets (max width of 768px) */
 @media (max-width: 768px) {
   .testimonials-wrapper {
     width: 100%;
   }
 
+  .slide-img {
+    width: 100%;
+  }
+
+  .slide-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .slide-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
   .slide {
     flex-direction: column;
+    align-items: center;
   }
 
   .slide-img {
-    margin-right: 0;
+    width: 100%; 
     margin-bottom: 1rem;
   }
 
@@ -1137,26 +1159,6 @@ nav {
 
   .slide-text p {
     font-size: 1rem;
-  }
-}
-
-/* For mobile phones (max width of 576px) */
-@media (max-width: 576px) {
-  .testimonials-header {
-    font-size: 1.8rem;
-  }
-
-  .testimonials-header h1 {
-    font-size: 1.1rem;
-    padding: 10px;
-  }
-
-  .slide-text h3 {
-    font-size: 1.2rem;
-  }
-
-  .slide-text p {
-    font-size: 0.9rem;
   }
 
   .controls i {
@@ -1169,3 +1171,19 @@ nav {
     height: 0.6rem;
   }
 }
+
+@media (max-width: 480px) {
+  .testimonials-header h1 {
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+
+  .slide-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .slide-text p {
+    font-size: 0.9rem;
+  }
+}
+
