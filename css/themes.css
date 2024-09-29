@@ -228,7 +228,7 @@ nav {
     }
 
     .nav__links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1.5rem;
     }
 
