@@ -41,7 +41,7 @@
       z-index: 99;
       position: sticky;
       top: 0;
-      height: 7vh;
+      height: auto;
       width: 100vw;
   }
   
@@ -228,7 +228,7 @@
       }
   
       .nav__links {
-          flex-direction: column;
+          flex-direction: row;
           gap: 1.5rem;
       }
   
